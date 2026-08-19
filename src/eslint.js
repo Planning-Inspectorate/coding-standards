@@ -1,0 +1,52 @@
+import eslint from '@eslint/js';
+import eslintConfigPrettier from 'eslint-config-prettier';
+import checkFile from 'eslint-plugin-check-file';
+import { globalIgnores } from 'eslint/config';
+import tseslint from 'typescript-eslint';
+
+/**
+ * @type {import('@eslint/config-helpers').ConfigWithExtendsArray}
+ */
+export default [
+	eslint.configs.recommended,
+	tseslint.configs.recommended,
+	globalIgnores([
+		'.husky',
+		'dist/**',
+		'node_modules/**',
+		'**/*.test.ts',
+		'**/.static/**',
+		'packages/database/src/client/**'
+	]),
+	eslintConfigPrettier,
+	{
+		rules: {
+			'@typescript-eslint/consistent-type-imports': 'error',
+			'@typescript-eslint/no-explicit-any': 'off'
+		}
+	},
+	{
+		files: ['**/*.{js,ts}'],
+		ignores: ['tmp/**/*.*', 'node_modules/**/*.*'],
+		plugins: {
+			'check-file': checkFile
+		},
+		rules: {
+			'check-file/filename-naming-convention': [
+				'error',
+				{
+					'**/*.{js,ts}': 'KEBAB_CASE'
+				},
+				{
+					ignoreMiddleExtensions: true
+				}
+			],
+			'check-file/folder-naming-convention': [
+				'error',
+				{
+					'**/*': 'KEBAB_CASE'
+				}
+			]
+		}
+	}
+];
