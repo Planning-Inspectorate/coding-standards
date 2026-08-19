@@ -1,0 +1,57 @@
+{
+  "name": "@planning-inspectorate/coding-standards",
+  "version": "0.0.0-semantically-released",
+  "description": "Configuration and other shared code for implementing Planning Inspectorate coding standards",
+  "main": "src/index.js",
+  "type": "module",
+  "exports": {
+    "import": "./src/index.js",
+    "require": "./src/index.cjs"
+  },
+  "scripts": {
+    "commitlint": "commitlint --from=$(git rev-parse $(git cherry origin/main | head -n 1 | cut -c 3-)^1)",
+    "gen": "npx rollup ./src/index.js --file ./src/index.cjs --format cjs",
+    "lint": "npx eslint .",
+    "format": "prettier --write .",
+    "format-check": "prettier --check ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Planning-Inspectorate/coding-standards.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@commitlint/cli": "^21.2.2",
+    "@commitlint/config-conventional": "^21.2.2",
+    "@eslint/js": "^10.0.1",
+    "conventional-changelog-conventionalcommits": "^10.4.0",
+    "eslint": "^10.8.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-check-file": "^3.3.2",
+    "lint-staged": "^17.3.0",
+    "prettier": "^3.9.6",
+    "prettier-plugin-organize-imports": "^4.3.0",
+    "prettier-plugin-prisma": "^5.0.0",
+    "rollup": "^4.62.4",
+    "semantic-release": "^25.0.9",
+    "typescript-eslint": "^8.67.0"
+  },
+  "peerDependencies": {
+    "@eslint/js": "^10.0.0",
+    "eslint": "^10.0.0",
+    "eslint-config-prettier": "^10.0.0",
+    "eslint-plugin-check-file": "^3.0.0",
+    "typescript-eslint": "^8.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix"
+    ],
+    "*.{js,ts,json,md,prisma,yml,yaml,scss}": [
+      "prettier --write"
+    ]
+  }
+}
