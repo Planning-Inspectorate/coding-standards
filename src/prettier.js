@@ -1,0 +1,15 @@
+/**
+ * @see https://prettier.io/docs/configuration
+ * @type {import("prettier").Config}
+ */
+export default {
+	printWidth: 120,
+	tabWidth: 2,
+	singleQuote: true,
+	useTabs: true,
+	semi: true,
+	trailingComma: 'none',
+	bracketSpacing: true,
+	arrowParens: 'always',
+	plugins: ['prettier-plugin-organize-imports', 'prettier-plugin-prisma']
+};
