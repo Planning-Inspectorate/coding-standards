@@ -1,0 +1,12 @@
+{
+	"compilerOptions": {
+		"baseUrl": ".",
+		"allowSyntheticDefaultImports": true,
+		"checkJs": true,
+		"esModuleInterop": true,
+		"moduleResolution": "nodenext",
+		"target": "esnext",
+		"module": "nodenext",
+		"strict": true
+	}
+}
