@@ -13,7 +13,8 @@
     "gen": "npx rollup ./src/index.js --file ./src/index.cjs --format cjs",
     "lint": "npx eslint .",
     "format": "prettier --write .",
-    "format-check": "prettier --check ."
+    "format-check": "prettier --check .",
+    "test": "node --test"
   },
   "repository": {
     "type": "git",
