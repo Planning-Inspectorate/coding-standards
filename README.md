@@ -6,7 +6,16 @@ This repository is for common tooling configuration and associated files, relati
 
 First, install via npm
 
-`npm install --save @planning-inspectorate/coding-standards`
+`npm install --save-dev @planning-inspectorate/coding-standards`
+
+Also ensure any other requirements are met, which vary. The requirements are:
+
+| Package    | Requirements                                                                                                                                                                                   |
+| ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| commitlint | <ul><li>@commitlint/cli</li><li>@commitlint/config-conventional</li></ul>                                                                                                                      |
+| eslint     | <ul><li>@eslint/js</li><li>eslint</li><li>eslint-config-prettier</li><li>eslint-plugin-check-file</li><li>globals</li><li>typescript-eslint</li></ul>                                          |
+| prettier   | <ul><li>prettier-plugin-organize-imports</li><li>prettier-plugin-prisma</li></ul>                                                                                                              |
+| stylelint  | <ul><li>stylelint</li><li>stylelint-config-prettier-scss</li><li>stylelint-config-recess-order</li><li>stylelint-config-standard-scss</li><li>stylelint-order</li><li>stylelint-scss</li></ul> |
 
 Then import and use where needed, for example:
 
