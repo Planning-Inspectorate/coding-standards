@@ -3,8 +3,10 @@
   "version": "0.0.0-semantically-released",
   "description": "Configuration and other shared code for implementing Planning Inspectorate coding standards",
   "main": "src/index.js",
+  "types": "src/index.d.ts",
   "type": "module",
   "exports": {
+    "types": "./src/index.d.ts",
     "import": "./src/index.js",
     "require": "./src/index.cjs"
   },
