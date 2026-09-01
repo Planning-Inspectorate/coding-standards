@@ -7,8 +7,7 @@
   "type": "module",
   "exports": {
     "types": "./src/index.d.ts",
-    "import": "./src/index.js",
-    "require": "./src/index.cjs"
+    "import": "./src/index.js"
   },
   "scripts": {
     "commitlint": "commitlint --from=$(git rev-parse $(git cherry origin/main | head -n 1 | cut -c 3-)^1)",
