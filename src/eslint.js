@@ -24,6 +24,11 @@ export default [
 			'@typescript-eslint/no-explicit-any': 'off'
 		}
 	},
+	{
+		rules: {
+			camelcase: 'error'
+		}
+	},
 	globalIgnores([
 		'.husky',
 		'dist/**',
