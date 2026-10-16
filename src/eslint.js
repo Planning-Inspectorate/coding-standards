@@ -20,8 +20,7 @@ export default [
 		files: ['**/*.ts'],
 		extends: [tseslint.configs.recommended],
 		rules: {
-			'@typescript-eslint/consistent-type-imports': 'error',
-			'@typescript-eslint/no-explicit-any': 'off'
+			'@typescript-eslint/consistent-type-imports': 'error'
 		}
 	},
 	{
