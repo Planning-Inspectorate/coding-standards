@@ -42,8 +42,8 @@ export default defineConfig([
 	...eslintConfig,
 	{
 		rules: {
-			// be more stict and don't allow 'any'
-			'@typescript-eslint/no-explicit-any': 'error'
+			// Relax the default camelcase rule to a warning
+			camelcase: 'warn'
 		}
 	}
 ]);
